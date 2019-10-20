@@ -11,7 +11,7 @@ The required input are the independent frames. For the extraction of the frames 
 ### Blender
 Finally, I've compiled an Add-on for Blender 2.7.x to extract the tracking data and saves it as a .csv file. To use it you just need to go to `File > User Preferences > Add-ons` and press `Install Add-on from File...`. Next choose the python file `export_tracks_blender.py`. 
 
-There is now the new option `Movie clip Editor > Tools Panel > Solve > Export tracks` in Blender. 
+After activation there is the new option `Movie clip Editor > Tools Panel > Solve > Export tracks` in Blender. 
 
 I recommend using an `Dilate/Erode`-node with `Feather` in the `Node Editor` with a negative distance.
 
