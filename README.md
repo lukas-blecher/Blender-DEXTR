@@ -1,8 +1,8 @@
 # Blender DEXTR
 
 ### Base Repository
-This repository is an application of the Deep Extreme Cut (DEXTR) [repository](https://github.com/scaelles/DEXTR-PyTorch) by scaelles for [Blender](https://www.blender.org).
-This enabels you to get easy masks from only a few tracking points. A downside is that the poits are determining the bounding box of the mask. There is an option for padding implemnted, however the performance of the pretrained model suffers greatly. The model is also unable to take previous frames into account and only works on a frame to frame basis. 
+This repository is an application of the [Deep Extreme Cut (DEXTR) repository](https://github.com/scaelles/DEXTR-PyTorch) by scaelles for [Blender](https://www.blender.org).
+This enabels you to get automatic masks from only a few tracking points. A downside is that the poits are determining the bounding box of the mask. There is an option for padding implemnted, however the performance of the pretrained model suffers greatly. This implementation is also unable to take previous frames into account and only works on a frame to frame basis. 
 
 ### Video to Image Sequence
 The required input are the independent frames. For the extraction of the frames from the video, I've added the python script `framecutter.py` that saves the pictures in a compatible manner using [ffmpeg](https://www.ffmpeg.org).
@@ -13,11 +13,20 @@ Finally, I've compiled an Add-on for Blender 2.7.x to extract the tracking data 
 
 There is now the new option `Movie clip Editor > Tools Panel > Solve > Export tracks` in Blender. 
 
-I recommend using an `Dilate/Erode`-node in the `Node Editor` with a negative distance.
+I recommend using an `Dilate/Erode`-node with `Feather` in the `Node Editor` with a negative distance.
 
+![NodeEditor](https://github.com/lukas-blecher/Blender-DEXTR/blob/master/doc/node_editor.png?raw=true)
 
+### Usage
+ * Track the bounding box of the object
+ * Export the tracking data
+ * Get Image Sequence 
+ * Execute a command like `python demo.py --input PATH_FOLDER_OF_IMAGE_SEQUENCE --output OUTPUT_FOLDER --anchor-points PATH_TO_FOLDER_WITH_TRACKING_DATA`
+ * Add `Image Sequence` in the Node Editor in Blender. (Optional: Add `Dilate/Erode`-node)
 
-
+This is how an output could look like: 
+![demo](https://github.com/lukas-blecher/Blender-DEXTR/blob/master/doc/anim.gif?raw=true)
+Original Video: https://www.youtube.com/watch?v=1Cir0J6jwBM
 
 ---
 
