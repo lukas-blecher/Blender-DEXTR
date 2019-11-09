@@ -2,7 +2,7 @@
 
 ### Base Repository
 This repository is an application of the [Deep Extreme Cut (DEXTR) repository](https://github.com/scaelles/DEXTR-PyTorch) by scaelles for [Blender](https://www.blender.org).
-This enabels you to get automatic masks from only a few tracking points. A downside is that the poits are determining the bounding box of the mask. There is an option for padding implemnted, however the performance of the pretrained model suffers greatly. This implementation is also unable to take previous frames into account and only works on a frame to frame basis. 
+This enabels you to get automatic masks from only a few tracking points. A downside is that the poits are determining the bounding box of the mask. There is an option for padding implemented, however the performance of the pretrained model suffers greatly. This implementation is also unable to take previous frames into account and only works on a frame to frame basis. 
 
 ### Video to Image Sequence
 The required input are the independent frames. For the extraction of the frames from the video, I've added the python script `framecutter.py` that saves the pictures in a compatible manner using [ffmpeg](https://www.ffmpeg.org).
@@ -30,7 +30,7 @@ Original Video: https://www.youtube.com/watch?v=1Cir0J6jwBM
 
 ---
 
-Original README:
+#### Original README:
 
 ## Deep Extreme Cut (DEXTR)
 Visit our [project page](http://www.vision.ee.ethz.ch/~cvlsegmentation/dextr) for accessing the paper, and the pre-computed results.
