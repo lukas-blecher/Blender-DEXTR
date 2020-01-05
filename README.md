@@ -1,5 +1,5 @@
 # Blender DEXTR
-
+**Note:** Since I published this repository I have written a better and improved Addon with the same idea. It can be found here: [https://github.com/lukas-blecher/AutoMask](https://github.com/lukas-blecher/AutoMask)
 ### Base Repository
 This repository is an application of the [Deep Extreme Cut (DEXTR) repository](https://github.com/scaelles/DEXTR-PyTorch) by scaelles for [Blender](https://www.blender.org).
 This enabels you to get automatic masks from only a few tracking points. A downside is that the poits are determining the bounding box of the mask. There is an option for padding implemented, however the performance of the pretrained model suffers greatly. This implementation is also unable to take previous frames into account and only works on a frame to frame basis. 
